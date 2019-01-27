@@ -1,0 +1,27 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #F8766D;
+  text-align:center;
+}
+
+h1:hover{
+ color: red;
+ cursor: pointer; 
+}
+
+.well {
+background-color: #EFEBE6;	
+border: 1px solid #632B30;
+}
+
+.matej {
+color: red;	
+}
+
+body {
+  background-color: #B0EAF4;
+ }

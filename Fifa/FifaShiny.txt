@@ -1,0 +1,5 @@
+https://www.kaggle.com/anupriyo/predicting-positions-using-lda-and-knn
+
+https://towardsdatascience.com/clustering-fifa-players-4408a0954cb4
+
+https://www.kaggle.com/jaseziv83/clustering-to-help-club-managers

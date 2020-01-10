@@ -1,0 +1,21 @@
+Forwards, Midfielders, Defenders and GoalKeepers
+
+def position_simplifier(val):
+    
+    if val == 'RF' or val == 'ST' or val == 'LF' or val == 'RS' or val == 'LS' or val == 'CF':
+        val = 'F'
+        return val
+        
+    elif val == 'LW' or val == 'RCM' or val == 'LCM' or val == 'LDM' or val == 'CAM' or val == 'CDM' or val == 'RM' \
+         or val == 'LAM' or val == 'LM' or val == 'RDM' or val == 'RW' or val == 'CM' or val == 'RAM':
+        val = 'M'
+        return val
+
+    
+    elif val == 'RCB' or val == 'CB' or val == 'LCB' or val == 'LB' or val == 'RB' or val == 'RWB' or val == 'LWB':
+        val = 'D'
+        return val
+    
+    else:
+        return val
+        

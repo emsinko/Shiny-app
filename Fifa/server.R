@@ -7,6 +7,8 @@
 #    http://shiny.rstudio.com/
 #
 
+data_raw <- readr::read_csv("data/data.csv")
+
 library(shiny)
 
 
@@ -23,4 +25,14 @@ shinyServer(function(input, output, session) {
   output$table <- DT::renderDataTable({
     DT::datatable(cars)
   })
+  
+  # display 10 rows initially
+  output$data_raw <- DT::renderDataTable(
+    DT::datatable(data_raw, options = list(
+      lengthMenu = list(c(10, 25,50, -1), c('10','25','50', 'All')),
+      pageLength = 15
+    ))
+  )
+  
+  
 })

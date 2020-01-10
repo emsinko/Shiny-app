@@ -30,6 +30,10 @@ library(shiny)
 shinyUI(
   
   navbarPage("FIFA 2019",theme = shinytheme("united"),
+             tabPanel("Uvod",#,
+                      #includeHTML("zdrojdat.html")
+                      img(src='cover2.jpg', align = "center",height="80%", width="80%")
+                      ),
              tabPanel("Pochopenie ciela",
                       sidebarLayout(
                         sidebarPanel(
@@ -42,8 +46,16 @@ shinyUI(
                         )
                       )
              ),
-             tabPanel("Priprava dat",
-                      verbatimTextOutput("summary")
+             navbarMenu("Data",
+                        tabPanel("Zdroj",
+                                 "https://www.kaggle.com/karangadiya/fifa19"      
+                        ),
+                        tabPanel("Raw data",
+                                  DT::dataTableOutput('data_raw')
+                        ),
+                        tabPanel("Summary",
+                                 verbatimTextOutput("summary")
+                        )
              ),
              tabPanel("Modelovanie"#,
                       #verbatimTextOutput("summary")
